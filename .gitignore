@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+logs/*.log
+
+# Database files
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code and IDE-specific files
+.vscode/
+.vs/
+*.code-workspace
+
+# npm lock files
+package-lock.json
+yarn.lock
+
+# Specific folders in your structure
+mes/FileContentIndex
+mes/ProjectSettings.json
+mes/VSWorkspaceState.json
