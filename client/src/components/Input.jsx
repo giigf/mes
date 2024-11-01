@@ -1,20 +1,24 @@
-// components/Input.js
-import React from 'react';
+// src/components/Input.jsx
+import React, { useState } from 'react';
+import './style.css';
 
 export default function Input({ type = 'text', placeholder, value, onChange }) {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
+
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      style={{
-        padding: '10px',
-        margin: '5px 0',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        width: '100%',
-      }}
-    />
+    <div className={`input-container ${isFocused ? 'focused' : ''}`}>
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        className="animated-input"
+      />
+    </div>
   );
 }

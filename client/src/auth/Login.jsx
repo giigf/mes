@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import axios from 'axios';
+import './auth.css'
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -24,15 +25,8 @@ export default function Login() {
   };
 
   return (
-    <div style={{
-      maxWidth: '300px',
-      margin: '0 auto',
-      padding: '20px',
-      border: '1px solid #ccc',
-      borderRadius: '8px',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-    }}>
-      <h2>Авторизация</h2>
+    <div className='form-login'>
+      <h2>LOGIN</h2>
       <Input
         type="text"
         placeholder="Имя пользователя"

@@ -1,0 +1,35 @@
+/* src/components/Input.css */
+.input-container {
+  width: 100%;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.animated-input {
+  width: 100%;
+  background-color: rgb(231, 229, 229);
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 0.25em;
+  outline: none;
+  transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-input:focus {
+  width: 110%; /* Увеличиваем ширину при фокусе */
+  border-color: transparent;
+  animation: borderEffect 0.5s ease forwards;
+}
+  
+  @keyframes borderEffect {
+    0% {
+      box-shadow: 0 0 0 0.1em rgba(216, 27, 96, 1);
+    }
+    100% {
+      box-shadow: 0 0 2em 1.5em rgba(216, 27, 96, 0);
+    }
+  }
+  
